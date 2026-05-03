@@ -45,12 +45,12 @@ body {
     height: $cell-size;
     border: $border solid #000;
     box-sizing: border-box;
-    transition: all 0.5s;
+    transition: 0.5s;
     background-color: #eee;
 
     &:hover {
       cursor: pointer;
-      background: #ffbfcb;
+      background-color: #ffbfcb;
       transform: translateY(-20px);
     }
   }
@@ -77,7 +77,7 @@ body {
 
 @for $len from 28 through 31 {
   .calendar--month-length-#{$len} {
-    @for $i from ($len + 1) through 31 {
+    @for $i from ($len) to 31 {
       .calendar__day:nth-child(#{$i}) {
         display: none;
       }
